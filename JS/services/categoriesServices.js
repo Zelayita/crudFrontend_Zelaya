@@ -8,7 +8,7 @@ export async function getCategories(){
 
 export async function createCategories(data) { //data son los datos que se pide la funcion para ingresarlos en la base 
     await fetch(`${API_URL}/newCategory`, {
-        metoth: 'POST',
+        method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     });

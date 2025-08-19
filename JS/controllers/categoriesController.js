@@ -4,7 +4,7 @@ import{
     createCategories, //metodos del service
     updateCategory,
     deleteCategory
-}from '../services/categoriesService.js'; //ruta de donde estoy sacando los metodos
+}from '../services/categoriesServices.js'; //ruta de donde estoy sacando los metodos
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const tableBody = document.querySelector('#categoriesTable tbody');//querySelector permite agarrar un monton de elementos, cuando se utiliza querySelector el id tiene que ir con un #
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         e.preventDefault(); //evitamos que el formulario se envie al hacer submit
         const id = form.categoryId.value; //obtenemos el id del registro
         const data = { //obteniendo los datos que vienen del formulario
-            nombreCategoria: form.categoryName.vale.trim(),
+            nombreCategoria: form.categoryName.value.trim(),
             descripcion: form.categoryDescription.value.trim()
         };
 
